@@ -4,7 +4,7 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 let randomNumbers = [];
-let seconds = 5;
+let seconds = 30;
 let right = [];
 let wrong = [];
 
@@ -119,7 +119,7 @@ readyButton.addEventListener('click', function(){
     // -> in questo modo il conto alla rovescia parte subito e non dopo un secondo
     checkNumbers();
     
-    const timer = setInterval(checkNumbers, 1000); // la funzione deve partire ogni 1 secondo per far decrementare seconds
+    const clock = setInterval(checkNumbers, 1000); // la funzione deve partire ogni 1 secondo per far decrementare seconds
 
 })
 
