@@ -13,6 +13,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .cointainer{
@@ -20,9 +21,26 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-#timer, .guessed-numbers, .input{
+.intro, .timer-container, .input-container, .guessed-numbers{
     display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#btn-ready, #btn-insert ,#btn-check{
+    width: 30%;
+}
+
+
