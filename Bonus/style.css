@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cointainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro, .timer-container, .input-container, .guessed-numbers{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-wrapper{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 60vh;
+}
+
+.input{
+    width: 50px;
+    text-align: center;
+}
+
+#btn-ready, #btn-insert ,#btn-check{
+    width: 30%;
+}
+
+#btn-insert{
+    background-color: tomato;
+    width: 20%;
+}
+
+
