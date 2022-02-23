@@ -88,23 +88,23 @@ readyButton.addEventListener('click', function(){
                     let userNumber = parseInt(input.value);
                     console.log(userNumber);
                     
-                    // se numero inserito è tra i numeri random iniziali allora va nell'array push altrimenti va nell'array wrong
-                    if( randomNumbers.includes(userNumber) ){
+                    // se il numero inserito dall'utente è incluso nell'array dei numeri da ricordare e NON è già tra i numeri indovinati
+                    if( randomNumbers.includes(userNumber) && !right.includes(userNumber)){
                         right.push(userNumber);
-            
-                    } else {
+                
+                    } else { 
+                        // qui ci finiscono i numeri sbagliato o doppi
                         wrong.push(userNumber);
                     }
                     
                     
                     if (i === randomNumbers.length){
-                        console.log(`Hai indovinato ${right.length} numeri che sono ${right.join(', ')}`);
-                        console.log('sbagliato', wrong);
-            
                         inputContainer.style.display = 'none';
                         guessedNumbers.style.display = 'flex';
                         guessedNumbers.innerHTML += `Hai indovinato ${right.length} numeri --> ${right.join(', ')}`
                         console.log(guessedNumbers);
+                        
+                        console.log('sbagliati o doppi', wrong);
                     }
                 })
             }
